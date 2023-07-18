@@ -20,8 +20,9 @@ The folder order to follow for this session:
 
 1. ROS1 Workspace Organization
 2. Publisher
-    2. Creating a Publisher Node
-    3. Package II
+    1. Creating a Publisher Node
+    2. Package II
 3. Subscriber
-    2. Creating a Subscriber Node
-    3. Package II
+    1. Creating a Subscriber Node
+    2. Package II
+4. Custom Messages

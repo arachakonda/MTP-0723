@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="topics_quiz" type="controller.py" name="topics_quiz_node" output="screen">
+    </node>
+    <node pkg="topics_quiz" type="range_values.py" name="topics_quiz_node_vals" output="screen">
+    </node>
+</launch>

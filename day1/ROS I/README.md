@@ -19,10 +19,15 @@ Note: at step 1.4 pick **Desktop-Full Install** and proceed with the installatio
 The folder order to follow for this session:
 
 1. ROS1 Workspace Organization
-2. Publisher
-    1. Creating a Publisher Node
-    2. Package II
-3. Subscriber
-    1. Creating a Subscriber Node
-    2. Package II
-4. Custom Messages
+2. Nodes
+    1. Topics
+        1. Publisher
+            1. Creating a Publisher Node
+            2. Package II
+        2. Subscriber
+            1. Creating a Subscriber Node
+            2. Package II
+    2. Custom Messages
+    3. Services
+        1. Service server
+        2. Service client

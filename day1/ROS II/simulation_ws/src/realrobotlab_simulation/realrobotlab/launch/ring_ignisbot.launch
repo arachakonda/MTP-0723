@@ -1,0 +1,19 @@
+<launch>
+  <!-- simulation -->
+    <include file="$(find realrobotlab)/launch/test.launch">
+      <arg name="gui" value="true"/>
+    </include>
+
+
+  <!-- robot -->
+  <include file="$(find jetdog_description)/launch/spawn.launch">
+    <arg name="x" value="0.1"/>
+    <arg name="y" value="0.3"/>
+    <arg name="z" value="0.05"/>
+    <arg name="roll" value="0.0"/>
+    <arg name="pitch" value="0.0"/>
+    <arg name="yaw" value="0" />
+    <arg name="xacro_robot_file" value="$(find jetdog_description)/robots/jetdog_rrl.xacro"/>
+  </include>
+
+</launch>

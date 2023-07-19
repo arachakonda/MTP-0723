@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <include file="$(find aibo_description)/launch/aibo_tc_start_world.launch"/>
+  <include file="$(find aibo_description)/launch/aibo_complete_v2.launch"/>
+
+  <node name="init_aibo_position" pkg="aibo_description" type="init_aibo.py" output="screen"/>
+
+</launch>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find haro_description)/launch/spawn_haro.launch"/>
+    <include file="$(find haro_description)/launch/make_haro_movable.launch"/>
+    <include file="$(find haro_description)/launch/haro_publish_world_tf.launch"/>
+    <include file="$(find haro_description)/launch/haro_world_tf_listener.launch"/>
+    <include file="$(find haro_description)/launch/haro_twiststamped.launch"/>
+</launch>

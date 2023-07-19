@@ -1,0 +1,193 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='figurine_3'>
+    <link name='link_4'>
+        <inertial>
+          <pose frame=''>0 0 0.03389 0 -0 0</pose>
+        <mass>0.25</mass>
+        <inertia>
+          <ixx>0.000107436595333</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.000101389072521</iyy>
+          <iyz>0.0</iyz>
+          <izz>1.74036511875e-05</izz>
+        </inertia>
+      </inertial>
+
+
+     <visual name='visual_1'>
+      <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/body.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_1'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/body.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        </collision>
+
+        <visual name='visual_2'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/mouth.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_2'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/mouth.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+       </collision>
+
+        <visual name='visual_3'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/eyes.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_3'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/eyes.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+       </collision>
+
+        <visual name='visual_4'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/hair.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_4'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/hair.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+        <visual name='visual_5'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/pants.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_5'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/pants.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+    </collision>
+
+
+        <visual name='visual_6'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/shirt.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_6'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/shirt.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+       </collision>
+
+
+        <visual name='visual_7'>
+         <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/shoes.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_7'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://figurine_3/meshes/shoes.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+    </link>
+
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

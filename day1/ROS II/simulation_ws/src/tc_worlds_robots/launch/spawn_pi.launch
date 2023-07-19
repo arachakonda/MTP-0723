@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+    <arg name="x" default="0.0" />
+    <arg name="y" default="0.0" />
+    <arg name="z" default="0.0" />
+    <arg name="urdf_robot_file" default="$(find pi_robot_pkg)/urdf/pi_robot_v2.urdf" />
+    <arg name="robot_name" default="pi_robot" />
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+          args="-file $(arg urdf_robot_file) -urdf -x $(arg x) -y $(arg y) -z $(arg z) -model $(arg robot_name)"/>
+    <!-- load the controllers -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/pi_robot" args="head_pan_joint_position_controller head_tilt_joint_position_controller torso_joint_position_controller left_shoulder_forward_joint_position_controller right_shoulder_forward_joint_position_controller left_shoulder_up_joint_position_controller right_shoulder_up_joint_position_controller left_elbow_joint_position_controller right_elbow_joint_position_controller left_wrist_joint_position_controller right_wrist_joint_position_controller joint_state_controller"/>
+    <!-- convert joint states to TF transforms for rviz, etc -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+        <remap from="/joint_states" to="/pi_robot/joint_states" />
+    </node>
+</launch>

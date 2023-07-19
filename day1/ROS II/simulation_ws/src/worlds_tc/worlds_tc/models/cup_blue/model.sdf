@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='cup_blue'>
+    <link name='link_13'>
+      <inertial>
+          <pose frame=''>0 0 0.055 0 -0 0</pose>
+        <mass>0.25</mass>
+        <inertia>
+          <ixx>0.000377851147224</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.000377851147224</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.000251535627781</izz>
+        </inertia>
+      </inertial>
+
+       <visual name='visual_1'>
+        <geometry>
+          <mesh>
+            <uri>model://cup_blue/meshes/cup1.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_1'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cup_blue/meshes/cup1.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

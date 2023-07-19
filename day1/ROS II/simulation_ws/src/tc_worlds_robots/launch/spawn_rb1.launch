@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find rb1_tc)/launch/rb1_spawn.launch" />
+  <include file="$(find rb1_tc)/launch/rb1_activate_controllers.launch" />
+
+</launch>

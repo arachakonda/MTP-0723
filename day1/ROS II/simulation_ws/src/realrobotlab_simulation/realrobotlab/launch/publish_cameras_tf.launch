@@ -1,0 +1,12 @@
+<launch>
+    <!-- We publish the TF of the Depth Camera-->
+    <!-- Get the Quaternion Conversion rpy/euler to Quaternion form this page: https://www.andre-gaschler.com/rotationconverter/-->
+    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="link1_broadcaster" args="0.85931 0.242068 0.805 0 0 0 1 world camera_depth_optical_frame" /> -->
+
+    <node args="0.85931 0.242068 0.805 0 0.523599 -2.6122 /world /camera_depth_optical_frame 20" 
+        name="kinect_base_link" 
+        pkg="tf" 
+        type="static_transform_publisher" />
+
+
+</launch>

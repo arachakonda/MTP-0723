@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='cup_glass'>
+    <link name='link_16'>
+      <pose frame=''>0 0 0 0 0 0</pose>
+
+        <inertial>
+          <pose frame=''>0 0 0.0467 0 -0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.00010925281734</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.00010925281734</iyy>
+          <iyz>0.0</iyz>
+          <izz>7.31129680125e-05</izz>
+        </inertia>
+      </inertial>
+
+
+       <visual name='visual_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cup_glass/meshes/cup_glass.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.6</transparency>
+      </visual>
+      <collision name='collision_1'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cup_glass/meshes/cup_glass.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+       </collision>
+    </link>
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

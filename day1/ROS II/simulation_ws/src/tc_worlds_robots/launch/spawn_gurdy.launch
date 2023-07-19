@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <arg name="urdf_robot_file" default="$(find gurdy_description)/urdf/gurdy.urdf" />
+    <param name="robot_description" command="cat $(arg urdf_robot_file)" />
+    <group ns="gurdy">
+        <!-- Spawn Part -->
+        <arg name="x" value="0.5" />
+        <arg name="y" value="0.0" />
+        <arg name="z" value="0.18" />
+        <arg name="robot_name" default="gurdy" />
+        <rosparam file="$(find gurdy_description)/config/gurdy_control.yaml" command="load" ns="/gurdy"/>
+        <param name="/gurdy/robot_description" command="$(find xacro)/xacro '$(find gurdy_description)/robot/gurdy.urdf.xacro'" />
+        <node name="urdf_spawner_gurdy" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf -x $(arg x) -y $(arg y) -z $(arg z)  -model $(arg robot_name) -param /gurdy/robot_description"/>
+        <node name="robot_state_publisher_gurdy" pkg="robot_state_publisher" type="robot_state_publisher"
+        respawn="false" output="screen">
+            <param name="publish_frequency" type="double" value="5.0" />
+        </node>
+        <node name="gurdy_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+        output="screen" args="--namespace=/gurdy 
+                              /gurdy/joint_state_controller 
+                              /gurdy/head_upperlegM1_joint_position_controller
+                              /gurdy/head_upperlegM2_joint_position_controller 
+                              /gurdy/head_upperlegM3_joint_position_controller
+                              /gurdy/upperlegM1_lowerlegM1_joint_position_controller
+                              /gurdy/upperlegM2_lowerlegM2_joint_position_controller
+                              /gurdy/upperlegM3_lowerlegM3_joint_position_controller
+                              --shutdown-timeout 3"></node>
+    </group>
+</launch>

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <arg name="robot" default="bb_8"/>
+  <arg name="debug" default="false"/>
+  <arg name="gui" default="false"/>
+  <arg name="headless" default="false"/>
+  <arg name="pause" default="false"/>
+
+  <!-- Oh, you wanted a robot? What about a BB-8?-->
+  <include file="$(find bb_8_gazebo)/launch/include/bb_8.launch.xml" />
+
+</launch>

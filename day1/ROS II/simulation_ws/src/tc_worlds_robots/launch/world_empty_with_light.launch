@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="debug" default="false"/>
+  <arg name="gui" default="false"/>
+  <arg name="pause" default="false"/>
+  <arg name="headless" default="false"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="/home/simulations/public_sim_ws/src/all/fetch_tc/fetch_sim/fetch_gazebo/worlds/empty_with_light.world"/>
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="$(arg pause)"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+</launch>

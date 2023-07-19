@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='bottle_beer'>
+    <link name='link_2'>
+
+      <inertial>
+          <pose frame=''>0 0 0.123373 0 -0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.00268246596629</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.00268246596629</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.00029129955625</izz>
+        </inertia>
+      </inertial>
+
+
+        <visual name='visual_1'>
+          <geometry>
+          <mesh>
+            <uri>model://bottle_beer/meshes/beer_bottle.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.4</transparency>
+      </visual>
+      <collision name='collision_1'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <mesh>
+            <uri>model://bottle_beer/meshes/beer_bottle.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        </collision>
+
+        <visual name='visual_2'>
+         <geometry>
+          <mesh>
+            <uri>model://bottle_beer/meshes/cap.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_2'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+       <geometry>
+          <mesh>
+            <uri>model://bottle_beer/meshes/cap.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+    </link>
+
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>
